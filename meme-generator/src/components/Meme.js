@@ -80,13 +80,7 @@ function Meme(){
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
-            
-
-            <div className="d-flex row text-center">
-                <button className="btn btn-info mx-2" onClick={decrese}>-</button>
-                <h3>{count}</h3>
-                <button className="btn btn-info mx-2" onClick={increase}>+</button>
-            </div>
+        
         </main>
     )
 }
