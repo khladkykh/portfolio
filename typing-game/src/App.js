@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
+import TimerIcon from '@mui/icons-material/Timer';
 import React from "react";
 
 function App() {
 
-  const STARTING_TIME = 60
+  const STARTING_TIME = 30
     
     const [text, setText] = useState("")
     const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME)
@@ -47,22 +48,31 @@ function App() {
     
 
   return (
-        <div>
-            <h1>How fast do you type?</h1>
+        <div className="main">
+            <div className="main-timer">
+                <TimerIcon sx={{fontSize: 40}}/>
+                <h4> {timeRemaining} sec</h4>
+            </div>
+            
+            <h1>HOW FAST DO YOU TYPE?</h1>
+            
+            
             <textarea
                 ref={textareaRef}
                 onChange={handleChange}
                 value={text}
                 disabled={!isTimeRunning}
             />
-            <h4>Time remaining: {timeRemaining}</h4>
-            <button 
-                onClick={startGame}
-                disabled={isTimeRunning}
-            >
-                Start
-            </button>
-            <h1>Word count: {wordCount}</h1>
+            <div className="mail-results">
+                <button 
+                    onClick={startGame}
+                    disabled={isTimeRunning}
+                >
+                    Start
+                </button>
+                <h1>Word count: {wordCount}</h1>
+            </div>
+            
         </div>
   );
 }

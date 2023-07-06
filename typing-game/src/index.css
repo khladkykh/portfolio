@@ -1,10 +1,10 @@
 html, body {
-  background: black;
-  color: #00b800;
+  background: rgb(21, 11, 90);
+  color: #f7f7f7;
   margin:0;
   padding: 0;
   padding-top: 10px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P';
   text-align: center;
 }
 
@@ -12,14 +12,37 @@ body {
   font-weight: 400;
 }
 
+.main h1 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.main-timer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .5rem;
+
+  margin: 1rem 3rem;
+}
+
+.main-timer h4{
+  font-size: 30px;
+}
+
+.mail-results{
+  margin-top: 3rem;
+}
+
 button {
-  font-family: 'Press Start 2P', cursive;
   display: block;
   margin: 0 auto;
   border: none;
-  background: #a80020;
-  background: #00b800;
-  padding: 10px 20px;
+  border-radius: 5px;
+  background: #d6c4ff;
+  padding: 1rem 2rem;
+  font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -29,22 +52,17 @@ button:disabled {
   background-color: #a5a2a2;
 }
 
-h1 {
-  font-size: 20px;
-  text-align:center;
-}
-
 textarea {
-  font-family: 'Press Start 2P', cursive;
-  border: 3px solid black;
-  width: 90%;
+  border: 2px solid rgb(244, 244, 244);
+  border-radius: 10px;
+  width: 70%;
   margin: 0 auto;
   outline: none;
   height: 200px;
-  background: #00b800;
+  background: #f7f7f7;
   padding: 10px;
 }
 
 textarea:disabled {
-  background-color: #a5a2a2;
+  background-color: #d6c4ff;
 }
